@@ -5,7 +5,6 @@ provider "google" {
     region = "asia-east1-a"
 }
 
-/*
 resource "google_compute_instance" "default" {
     name = "test"
     machine_type = "f1-micro"
@@ -19,4 +18,3 @@ resource "google_compute_instance" "default" {
         source = "default"
     }
 }
-*/
