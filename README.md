@@ -22,7 +22,20 @@ $ terraform show ./terraform.state
 
 ```
 $ ls
-gce.tf account.json client_secrets.json
+google_compute.tf account.json client_secrets.json
+
+$ terraform plan
+
+$ terraform apply
+
+$ terraform show ./terraform.tfstate 
+```
+
+### Demo 3
+
+```
+$ ls
+google_compute.tf.json account.json client_secrets.json
 
 $ terraform plan
 
