@@ -1,6 +1,9 @@
+variable "access_key" {}
+variable "secret_key" {}
+
 provider "aws" {
-    access_key = "ACCESS_KEY_HERE"
-    secret_key = "SECRET_KEY_HERE"
+    access_key = "${var.access_key}"
+    secret_key = "${var.secret_key}"
     region = "us-east-1"
 }
 
