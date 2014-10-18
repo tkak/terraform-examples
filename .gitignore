@@ -2,3 +2,4 @@ account.json
 client_secrets.json
 *backup
 *tfstate
+.terraform
