@@ -1,10 +1,23 @@
 {
+
+    "variable": {
+        "conoha_user": {},
+        "conoha_password": {},
+        "conoha_tenant": {}
+    },
+
     "provider": {
         "google": {
             "account_file": "./account.json",
             "client_secrets_file": "./client_secrets.json",
             "project": "tkakfrkw",
             "region": "asia-east1-a"
+        },
+
+         "conoha": {
+            "user": "${var.conoha_user}",
+            "password": "${var.conoha_password}",
+            "tenant": "${var.conoha_tenant}"
         }
     },
 
@@ -22,6 +35,13 @@
                 "network": {
                     "source": "default"
                 }
+            }
+        },
+
+        "conoha_container": {
+            "example": {
+                "name": "test1",
+                "depends_on": ["google_compute_instance.default"]
             }
         }
     }
