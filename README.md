@@ -1,9 +1,9 @@
-Terraform Demo
-==============
+Terraform Examples
+==================
 
-Terraform v0.3.0
+Terraform v0.3.1
 
-### Demo 1
+### AWS
 
 ```
 $ terraform plan \
@@ -18,7 +18,7 @@ $ terraform show ./terraform.state
 ```
 
 
-### Demo 2
+### Google compute
 
 ```
 $ ls
@@ -30,37 +30,3 @@ $ terraform apply
 
 $ terraform show ./terraform.tfstate 
 ```
-
-### Demo 3
-
-```
-$ ls
-google_compute.tf.json account.json client_secrets.json
-
-$ terraform plan
-
-$ terraform apply
-
-$ terraform show ./terraform.tfstate 
-```
-
-### Demo 4
-
-```
-$ ls
-module_test.tf
-
-$ terraform get 
-
-$ ls -a
-.terraform module_test.tf
-
-$ terraform apply
-
-$ terraform show ./terraform.tfstate 
-
-$ terraform destroy
-
-$ terraform show
-```
-
