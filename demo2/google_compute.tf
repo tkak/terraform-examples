@@ -1,3 +1,5 @@
+variable "key_path" {}
+
 provider "google" {
     account_file = "./account.json"
     client_secrets_file = "./client_secrets.json"
@@ -6,15 +8,26 @@ provider "google" {
 }
 
 resource "google_compute_instance" "default" {
-    name = "test"
+    name = "demo"
     machine_type = "f1-micro"
     zone = "asia-east1-b"
 
     disk {
-        image = "debian-7-wheezy-v20140814"
+        image = "centos-6-v20141108"
     }
 
     network {
         source = "default"
+    }
+
+    provisioner "remote-exec" {
+        connection {
+            user = "takaaki.furukawa"
+            key_file = "${var.key_path}"
+        }
+
+        inline = [
+        "echo 'hello world' > /tmp/demo.txt"
+        ]
     }
 }
